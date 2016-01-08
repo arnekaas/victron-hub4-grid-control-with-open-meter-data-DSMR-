@@ -1,0 +1,152 @@
+dbus-service-name,description,Address,Type,Scalefactor,Range,dbus-obj-path,dbus-unit,
+com.victronenergy.vebus,Input voltage phase 1,3,uint16,10,"0 to 6533",/Ac/ActiveIn/L1/V,V AC
+com.victronenergy.vebus,Input voltage phase 2,4,uint16,10,"0 to 6533",/Ac/ActiveIn/L2/V,V AC
+com.victronenergy.vebus,Input voltage phase 3,5,uint16,10,"0 to 6533",/Ac/ActiveIn/L3/V,V AC
+com.victronenergy.vebus,Input current phase 1,6,int16,10,"-3266 to 3266",/Ac/ActiveIn/L1/I,A AC
+com.victronenergy.vebus,Input current phase 2,7,int16,10,"-3266 to 3266",/Ac/ActiveIn/L2/I,A AC
+com.victronenergy.vebus,Input current phase 3,8,int16,10,"-3266 to 3266",/Ac/ActiveIn/L3/I,A AC
+com.victronenergy.vebus,Input frequency 1,9,int16,100,"-3268 to 3268",/Ac/ActiveIn/L1/F,Hz
+com.victronenergy.vebus,Input frequency 2,10,int16,100,"-3268 to 3268",/Ac/ActiveIn/L2/F,Hz
+com.victronenergy.vebus,Input frequency 3,11,int16,100,"-3268 to 3268",/Ac/ActiveIn/L3/F,Hz
+com.victronenergy.vebus,Input power 1,12,int16,"0.1",-326680 to 326680,/Ac/ActiveIn/L1/P,VA or Watts
+com.victronenergy.vebus,Input power 2,13,int16,"0.1",-326680 to 326680,/Ac/ActiveIn/L2/P,VA or Watts
+com.victronenergy.vebus,Input power 3,14,int16,"0.1",-326680 to 326680,/Ac/ActiveIn/L3/P,VA or Watts
+com.victronenergy.vebus,Output voltage phase 1,15,uint16,10,"0 to 6533",/Ac/Out/L1/V,V AC
+com.victronenergy.vebus,Output voltage phase 2,16,uint16,10,"0 to 6533",/Ac/Out/L2/V,V AC
+com.victronenergy.vebus,Output voltage phase 3,17,uint16,10,"0 to 6533",/Ac/Out/L3/V,V AC
+com.victronenergy.vebus,Output current phase 1,18,int16,10,"-3266 to 3266",/Ac/Out/L1/I,A AC
+com.victronenergy.vebus,Output current phase 2,19,int16,10,"-3266 to 3266",/Ac/Out/L2/I,A AC
+com.victronenergy.vebus,Output current phase 3,20,int16,10,"-3266 to 3266",/Ac/Out/L3/I,A AC
+com.victronenergy.vebus,Output frequency,21,int16,100,"-3268 to 3268",/Ac/Out/L1/F,Hz
+com.victronenergy.vebus,Active input current limit,22,int16,10,"-3266 to 3266",/Ac/ActiveIn/CurrentLimit,A
+com.victronenergy.vebus,Output power 1,23,int16,"0.1",-326680 to 326680,/Ac/Out/L1/P,VA or Watts
+com.victronenergy.vebus,Output power 2,24,int16,"0.1",-326680 to 326680,/Ac/Out/L2/P,VA or Watts
+com.victronenergy.vebus,Output power 3,25,int16,"0.1",-326680 to 326680,/Ac/Out/L3/P,VA or Watts
+com.victronenergy.vebus,Battery voltage,26,uint16,100,"0 to 653",/Dc/V,V DC
+com.victronenergy.vebus,Battery current,27,int16,10,"-3266 to 3266",/Dc/I,A DC
+com.victronenergy.vebus,Phase count,28,uint16,1,0 to 65336,/Ac/NumberOfPhases,count
+com.victronenergy.vebus,Active input,29,uint16,1,0 to 65336,/Ac/ActiveIn/ActiveInput,0=Input 1;1=Input 2;etc
+com.victronenergy.vebus,VE.Bus state of charge,30,uint16,10,"0 to 6533",/Soc,%
+com.victronenergy.vebus,VE.Bus state,31,uint16,1,0 to 65336,/State,0=Off;1=Low Power Mode;2=Fault;3=Bulk;4=Absorption;5=Float;6=Storage;7=Equalize;8=Passthru;9=Inverting;10=Power assist;11=Power supply mode;252=Bulk protection
+com.victronenergy.vebus,VE.Bus Error code,32,uint16,1,0 to 65336,/VebusError,"0=No error;1=VE.Bus Error 1: Device is switched off because one of the other phases in the system has switched off;2=VE.Bus Error 2: New and old types MK2 are mixed in the system;3=VE.Bus Error 3: Not all, or more than, the expected devices were found in the system;4=VE.Bus Error 4: No other device whatsoever detected;5=VE.Bus Error 5: Overvoltage on AC-out;6=VE.Bus Error 6: Error in DDC Program;10=VE.Bus Error 10: System time synchronisation problem occurred;14=VE.Bus Error 14: Device cannot transmit data;16=VE.Bus Error 16: Dongle missing;17=VE.Bus Error 17: One of the devices assumed master status because the original master failed;18=VE.Bus Error 18: Overvoltage has occurred;22=VE.Bus Error 22: This device cannot function as slave;24=VE.Bus Error 24: Switch-over system protection initiated;25=VE.Bus Error 25: Firmware incompatibility. The firmware of one of the connected device is not sufficiently up to date to operate in conjunction with this device;26=VE.Bus Error 26: Internal error"
+com.victronenergy.vebus,Switch Position,33,uint16,1,0 to 65336,/Mode,1=Charger Only;2=Inverter Only;3=On;4=Off
+com.victronenergy.vebus,Temperature,34,uint16,1,0 to 65336,/Alarms/HighTemperature,0=Ok;1=Warning;2=Alarm
+com.victronenergy.vebus,Low battery,35,uint16,1,0 to 65336,/Alarms/LowBattery,0=Ok;1=Warning;2=Alarm
+com.victronenergy.vebus,Overload,36,uint16,1,0 to 65336,/Alarms/Overload,0=Ok;1=Warning;2=Alarm
+com.victronenergy.vebus,Hub4 zero current setpoint,37,int16,1,-326.68 to 326.68,/Hub4/ExternalAcCurrentSetpoint,W
+com.victronenergy.battery,Battery voltage,259,uint16,100,"0 to 653",/Dc/0/V,V DC
+com.victronenergy.battery,Starter battery voltage,260,uint16,100,"0 to 653",/Dc/1/V,V DC
+com.victronenergy.battery,Current,261,int16,10,"-3266 to 3266",/Dc/0/I,A DC
+com.victronenergy.battery,Battery temperature,262,int16,10,"-3266 to 3266",/DC/0/T,Degrees celsius
+com.victronenergy.battery,Mid-point voltage of the battery bank,263,uint16,100,"0 to 653",/Dc/0/MidVoltage,V DC
+com.victronenergy.battery,Mid-point deviation of the battery bank,264,uint16,100,"0 to 653",/Dc/0/MidVoltageDeviation,V DC
+com.victronenergy.battery,Consumed Amphours,265,uint16,-10,"0 to 6533",/ConsumedAmphours,Ah
+com.victronenergy.battery,State of charge,266,uint16,10,"0 to 6533",/Soc,%
+com.victronenergy.battery,Time to go,301,uint16,"0,01",0 to 6533600,/TimeToGo,seconds
+com.victronenergy.battery,BMV Alarm status,267,uint16,1,0 to 65336,/Alarms/Alarm,0=No alarm;2=Alarm
+com.victronenergy.battery,BMV Low voltage Alarm,268,uint16,1,0 to 65336,/Alarms/LowVoltage,0=No alarm;2=Alarm
+com.victronenergy.battery,BMV High voltage Alarm,269,uint16,1,0 to 65336,/Alarms/HighVoltage,0=No alarm;2=Alarm
+com.victronenergy.battery,BMV Low starter-voltage Alarm,270,uint16,1,0 to 65336,/Alarms/LowStarterVoltage,0=No alarm;2=Alarm
+com.victronenergy.battery,BMV High starter-voltage Alarm,271,uint16,1,0 to 65336,/Alarms/HighStarterVoltage,0=No alarm;2=Alarm
+com.victronenergy.battery,BMV Low State-of-charge Alarm,272,uint16,1,0 to 65336,/Alarms/LowSoc,0=No alarm;2=Alarm
+com.victronenergy.battery,BMV Low temperature Alarm,273,uint16,1,0 to 65336,/Alarms/LowTemperature,0=No alarm;2=Alarm
+com.victronenergy.battery,BMV High temperature Alarm,274,uint16,1,0 to 65336,/Alarms/HighTemperature,0=No alarm;2=Alarm
+com.victronenergy.battery,BMV Mid-voltage Alarm,275,uint16,1,0 to 65336,/Alarms/MidVoltage,0=No alarm;2=Alarm
+com.victronenergy.battery,Low fused-voltage Alarm,276,uint16,1,0 to 65336,/Alarms/LowFusedVoltage,0=No alarm;2=Alarm
+com.victronenergy.battery,High fused-voltage Alarm,277,uint16,1,0 to 65336,/Alarms/HighFusedVoltage,0=No alarm;2=Alarm
+com.victronenergy.battery,Fuse blown Alarm,278,uint16,1,0 to 65336,/Alarms/FuseBlown,0=No alarm;2=Alarm
+com.victronenergy.battery,High internal-temperature Alarm,279,uint16,1,0 to 65336,/Alarms/HighInternalTemperature,0=No alarm;2=Alarm
+com.victronenergy.battery,BMV Relay status,280,uint16,1,0 to 65336,/Relay/0/State,0=Open;1=Closed
+com.victronenergy.battery,Deepest discharge,281,uint16,-10,"0 to 6533",/History/DeepestDischarge,Ah
+com.victronenergy.battery,Last discharge,282,uint16,-10,"0 to 6533",/History/LastDischarge,Ah
+com.victronenergy.battery,Average discharge,283,uint16,-10,"0 to 6533",/History/AverageDischarge,Ah
+com.victronenergy.battery,Charge cycles,284,uint16,1,0 to 65336,/History/ChargeCycles,count
+com.victronenergy.battery,Full discharges,285,uint16,1,0 to 65336,/History/FullDischarges,count
+com.victronenergy.battery,Total Ah drawn,286,uint16,-10,"0 to 6533",/History/TotalAhDrawn,Ah
+com.victronenergy.battery,Minimum voltage,287,uint16,100,"0 to 653",/History/MinimumVoltage,V DC
+com.victronenergy.battery,Maximum voltage,288,uint16,100,"0 to 653",/History/MaximumVoltage,V DC
+com.victronenergy.battery,Time since last full charge,289,uint16,"0,01",0 to 6533600,/History/TimeSinceLastFullCharge,seconds
+com.victronenergy.battery,Automatic syncs,290,uint16,1,0 to 65336,/History/AutomaticSyncs,count
+com.victronenergy.battery,Low voltage alarms,291,uint16,1,0 to 65336,/History/LowVoltageAlarms,count
+com.victronenergy.battery,High voltage alarms,292,uint16,1,0 to 65336,/History/HighVoltageAlarms,count
+com.victronenergy.battery,Low starter voltage alarms,293,uint16,1,0 to 65336,/History/LowStarterVoltageAlarms,count
+com.victronenergy.battery,High starter voltage alarms,294,uint16,1,0 to 65336,/History/HighStarterVoltageAlarms,count
+com.victronenergy.battery,Minimum starter voltage,295,uint16,100,"0 to 653",/History/MinimumStarterVoltage,V DC
+com.victronenergy.battery,Maximum starter voltage,296,uint16,100,"0 to 653",/History/MaximumStarterVoltage,V DC
+com.victronenergy.battery,Low fused-voltage alarms,297,uint16,1,0 to 65336,/History/LowFusedVoltageAlarms,count
+com.victronenergy.battery,High fused-voltage alarms,298,uint16,1,0 to 65336,/History/HighFusedVoltageAlarms,count
+com.victronenergy.battery,Minimum fused voltage,299,uint16,100,"0 to 653",/History/MinimumFusedVoltage,V DC
+com.victronenergy.battery,Maximum fused voltage,300,uint16,100,"0 to 653",/History/MaximumFusedVoltage,V DC
+com.victronenergy.solarcharger,Battery voltage,771,uint16,100,"0 to 653",/Dc/V,V DC
+com.victronenergy.solarcharger,Battery current,772,int16,10,"-3266 to 3266",/Dc/I,A DC
+com.victronenergy.solarcharger,Battery temperature,773,int16,10,"-3266 to 3266",/Dc/T,Degrees celsius
+com.victronenergy.solarcharger,Charger on/off,774,uint16,1,0 to 65336,/Mode,"0=Off;1=On;2=Error;3=Unavailable, Unknown"
+com.victronenergy.solarcharger,Charge state,775,uint16,1,0 to 65336,/State,0=Off;1=Low Power Mode;2=Fault;3=Bulk;4=Absorption;5=Float;6=Storage;7=Equalize;8=Passthru;9=Inverting;10=Power assist;11=Power supply mode;252=Bulk protection
+com.victronenergy.solarcharger,PV voltage,776,uint16,100,"0 to 653",/Pv/V,V DC
+com.victronenergy.solarcharger,PV current,777,int16,10,"-3266 to 3266",/Pv/I,A DC
+com.victronenergy.solarcharger,Equalization pending,778,uint16,1,0 to 65336,/Equalization/Pending,"0=No;1=Yes;2=Error;3=Unavailable, Unknown"
+com.victronenergy.solarcharger,Equalization time remaining,779,uint16,10,"0 to 6533",/Equalization/TimeRemaining,seconds
+com.victronenergy.solarcharger,Relay on the charger,780,uint16,1,0 to 65336,/Relay/0/State,0=Open;1=Closed
+com.victronenergy.solarcharger,Alarm condition,781,uint16,1,0 to 65336,/Alarms/Alarm,0=No alarm;2=Alarm
+com.victronenergy.solarcharger,Battery voltage is too low,782,uint16,1,0 to 65336,/Alarms/LowVoltage,0=No alarm;2=Alarm
+com.victronenergy.solarcharger,Battery voltage is too high,783,uint16,1,0 to 65336,/Alarms/HighVoltage,0=No alarm;2=Alarm
+com.victronenergy.solarcharger,Yield today,784,uint16,"0,01",0 to 6533600,/Yield/Today,kWh
+com.victronenergy.solarcharger,Maximum charge power today,785,uint16,1,0 to 65336,/MaxChargePower/Today,W
+com.victronenergy.solarcharger,Yield yesterday,786,uint16,"0,01",0 to 6533600,/Yield/Yesterday,kWh
+com.victronenergy.solarcharger,Maximum charge power yesterday,787,uint16,1,0 to 65336,/MaxChargePower/Yesterday,W
+com.victronenergy.solarcharger,Error code,788,uint16,1,0 to 65336,/ErrorCode,0=No error;1=Battery temperature too high;2=Battery voltage too high;3=Battery temperature sensor miswired (+);4=Battery temperature sensor miswired (-);5=Battery temperature sensor disconnected;6=Battery voltage sense miswired (+);7=Battery voltage sense miswired (-);8=Battery voltage sense disconnected;9=Battery voltage wire losses too high;17=Charger temperature too high;18=Charger over-current;19=Charger current polarity reversed;20=Bulk time limit reached;22=Charger temperature sensor miswired;23=Charger temperature sensor disconnected;34=Input current too high
+com.victronenergy.pvinverter,Position,1026,uint16,1,0 to 65336,/Position,0=PV Inverter coupled on AC input 1;1=PV Inverter coupled on AC output;2=PV Inverter coupled on AC input 2
+com.victronenergy.pvinverter,L1 Voltage,1027,uint16,10,"0 to 6533",/Ac/L1/Voltage,V AC
+com.victronenergy.pvinverter,L1 Current,1028,int16,10,"-3266 to 3266",/Ac/L1/Current,A AC
+com.victronenergy.pvinverter,L1 Power,1029,uint16,1,0 to 65336,/Ac/L1/Power,W
+com.victronenergy.pvinverter,L1 Energy,1030,uint16,1,0 to 65336,/Ac/L1/Energy/Forward,kWh
+com.victronenergy.pvinverter,L2 Voltage,1031,uint16,10,"0 to 6533",/Ac/L2/Voltage,V AC
+com.victronenergy.pvinverter,L2 Current,1032,int16,10,"-3266 to 3266",/Ac/L2/Current,A AC
+com.victronenergy.pvinverter,L2 Power,1033,uint16,1,0 to 65336,/Ac/L2/Power,W
+com.victronenergy.pvinverter,L2 Energy,1034,uint16,1,0 to 65336,/Ac/L2/Energy/Forward,kWh
+com.victronenergy.pvinverter,L3 Voltage,1035,uint16,10,"0 to 6533",/Ac/L3/Voltage,V AC
+com.victronenergy.pvinverter,L3 Current,1036,int16,10,"-3266 to 3266",/Ac/L3/Current,A AC
+com.victronenergy.pvinverter,L3 Power,1037,uint16,1,0 to 65336,/Ac/L3/Power,W
+com.victronenergy.pvinverter,L3 Energy,1038,uint16,1,0 to 65336,/Ac/L3/Energy/Forward,kWh
+com.victronenergy.bms,State,1282,uint16,1,0 to 65336,/State,0=Initializing (Wait start);1=Initializing (before boot);2=Initializing (Before boot delay);3=Initializing (Wait boot);4=Initializing;5=Initializing (Measure battery voltage);6=Initializing (Calculate battery voltage);7=Initializing (Wait bus voltage);8=Initializing (Wait for lynx shunt);9=Running;10=Error;11=Error
+com.victronenergy.bms,Error code,1283,uint16,1,0 to 65336,/Error,0=No error;1=Battery initialization error;2=No batteries connected;3=Unknown battery;4=Different battery type;5=Number of batteries incorrect;6=Lynx Shunt not found;7=Battery measure error;8=Internal calculation error;9=Batteries in series not ok;10=Number of batteries incorrect;11=Hardware error;12=Watchdog error;13=Over voltage;14=Under voltage;15=Over temperature;16=Under temperature;22=ADC error;23=Slave error;24=Slave warning;25=Pre-charge error;26=Contactor error;27=Over current
+com.victronenergy.bms,System-switch,1284,uint16,1,0 to 65336,/SystemSwitch,0=Disabled;1=Enabled
+com.victronenergy.bms,Balancing,1285,uint16,1,0 to 65336,/Balancing,0=Inactive;1=Active
+com.victronenergy.bms,System; number of batteries,1286,uint16,1,0 to 65336,/System/NrOfBatteries,count
+com.victronenergy.bms,System; batteries parallel,1287,uint16,1,0 to 65336,/System/BatteriesParallel,count
+com.victronenergy.bms,System; batteries series,1288,uint16,1,0 to 65336,/System/BatteriesSeries,count
+com.victronenergy.bms,System; number of cells per battery,1289,uint16,1,0 to 65336,/System/NrOfCellsPerBattery,count
+com.victronenergy.bms,System; minimum cell voltage,1290,uint16,100,"0 to 653",/System/MinCellVoltage,V DC
+com.victronenergy.bms,System; maximum cell voltage,1291,uint16,100,"0 to 653",/System/MaxCellVoltage,V DC
+com.victronenergy.bms,Diagnostics; shutdowns due to error,1292,uint16,1,0 to 65336,/Diagnostics/ShutDownsDueError,count
+com.victronenergy.bms,Diagnostics; 1st last error,1293,uint16,1,0 to 65336,/Diagnostics/LastError1,0=No error;1=Battery initialization error;2=No batteries connected;3=Unknown battery;4=Different battery type;5=Number of batteries incorrect;6=Lynx Shunt not found;7=Battery measure error;8=Internal calculation error;9=Batteries in series not ok;10=Number of batteries incorrect;11=Hardware error;12=Watchdog error;13=Over voltage;14=Under voltage;15=Over temperature;16=Under temperature;22=ADC error;23=Slave error;24=Slave warning;25=Pre-charge error;26=Contactor error;27=Over current
+com.victronenergy.bms,Diagnostics; 2nd last error,1294,uint16,1,0 to 65336,/Diagnostics/LastError2,0=No error;1=Battery initialization error;2=No batteries connected;3=Unknown battery;4=Different battery type;5=Number of batteries incorrect;6=Lynx Shunt not found;7=Battery measure error;8=Internal calculation error;9=Batteries in series not ok;10=Number of batteries incorrect;11=Hardware error;12=Watchdog error;13=Over voltage;14=Under voltage;15=Over temperature;16=Under temperature;22=ADC error;23=Slave error;24=Slave warning;25=Pre-charge error;26=Contactor error;27=Over current
+com.victronenergy.bms,Diagnostics; 3rd last error,1295,uint16,1,0 to 65336,/Diagnostics/LastError3,0=No error;1=Battery initialization error;2=No batteries connected;3=Unknown battery;4=Different battery type;5=Number of batteries incorrect;6=Lynx Shunt not found;7=Battery measure error;8=Internal calculation error;9=Batteries in series not ok;10=Number of batteries incorrect;11=Hardware error;12=Watchdog error;13=Over voltage;14=Under voltage;15=Over temperature;16=Under temperature;22=ADC error;23=Slave error;24=Slave warning;25=Pre-charge error;26=Contactor error;27=Over current
+com.victronenergy.bms,Diagnostics; 4th last error,1296,uint16,1,0 to 65336,/Diagnostics/LastError4,0=No error;1=Battery initialization error;2=No batteries connected;3=Unknown battery;4=Different battery type;5=Number of batteries incorrect;6=Lynx Shunt not found;7=Battery measure error;8=Internal calculation error;9=Batteries in series not ok;10=Number of batteries incorrect;11=Hardware error;12=Watchdog error;13=Over voltage;14=Under voltage;15=Over temperature;16=Under temperature;22=ADC error;23=Slave error;24=Slave warning;25=Pre-charge error;26=Contactor error;27=Over current
+com.victronenergy.bms,IO; allow to charge,1297,uint16,1,0 to 65336,/Io/AllowToCharge,0=No;1=Yes
+com.victronenergy.bms,IO; allow to discharge,1298,uint16,1,0 to 65336,/Io/AllowToDischarge,0=No;1=Yes
+com.victronenergy.bms,IO; external relay,1299,uint16,1,0 to 65336,/Io/ExternalRelay,0=Inactive;1=Active
+com.victronenergy.bms,Minimum cell-voltage,1300,uint16,100,"0 to 653",/History/MinimumCellVoltage,V DC
+com.victronenergy.bms,Maximum cell-voltage,1301,uint16,100,"0 to 653",/History/MaximumCellVoltage,V DC
+com.victronenergy.motordrive,Motor RPM,2048,int16,1,-32668 to 32668,/Motor/RPM,RPM
+com.victronenergy.motordrive,Motor temperature,2049,int16,10,"-3266 to 3266",/Motor/Temperature,Degrees celsius
+com.victronenergy.motordrive,Controller DC Voltage,2050,uint16,100,"0 to 653",/Controller/DC/Voltage,V DC
+com.victronenergy.motordrive,Controller DC Current,2051,int16,10,"-3266 to 3266",/Controller/DC/Current,A DC
+com.victronenergy.motordrive,Controller DC Power,2052,int16,10,"-3266 to 3266",/Controller/DC/Power,W
+com.victronenergy.motordrive,Controller Temperature,2053,int16,10,"-3266 to 3266",/Controller/Temperature,Degrees celsius
+com.victronenergy.charger,Output 1 - voltage,2307,uint16,100,"0 to 653",/Dc/0/V,V DC
+com.victronenergy.charger,Output 1 - current,2308,int16,10,"-3266 to 3266",/Dc/0/I,A DC
+com.victronenergy.charger,Output 1 - temperature,2309,int16,10,"-3266 to 3266",/Dc/0/T,Degrees celsius
+com.victronenergy.charger,Output 2 - voltage,2310,uint16,100,"0 to 653",/Dc/1/V,V DC
+com.victronenergy.charger,Output 2 - current,2311,int16,10,"-3266 to 3266",/Dc/1/I,A DC
+com.victronenergy.charger,Output 3 - voltage,2312,uint16,100,"0 to 653",/Dc/2/V,V DC
+com.victronenergy.charger,Output 3 - current,2313,int16,10,"-3266 to 3266",/Dc/2/I,A DC
+com.victronenergy.charger,AC Current,2314,int16,10,"-3266 to 3266",/Ac/In/L1/I,A AC
+com.victronenergy.charger,AC Power,2315,uint16,1,0 to 65336,/Ac/In/L1/P,W DC
+com.victronenergy.charger,AC Current limit,2316,int16,10,"-3266 to 3266",/Ac/In/CurrentLimit,A AC
+com.victronenergy.charger,Charger on/off,2317,uint16,1,0 to 65336,/Mode,"0=Off;1=On;2=Error;3=Unavailable, Unknown"
+com.victronenergy.charger,Charge state,2318,uint16,1,0 to 65336,/State,0=Off;1=Low Power Mode;2=Fault;3=Bulk;4=Absorption;5=Float;6=Storage;7=Equalize;8=Passthru;9=Inverting;10=Power assist;11=Power supply mode;252=Bulk protection
+com.victronenergy.charger,Error code,2319,uint16,1,0 to 65336,/ErrorCode,0=No error;1=Battery temperature too high;2=Battery voltage too high;3=Battery temperature sensor miswired (+);4=Battery temperature sensor miswired (-);5=Battery temperature sensor disconnected;6=Battery voltage sense miswired (+);7=Battery voltage sense miswired (-);8=Battery voltage sense disconnected;9=Battery voltage wire losses too high;17=Charger temperature too high;18=Charger over-current;19=Charger current polarity reversed;20=Bulk time limit reached;22=Charger temperature sensor miswired;23=Charger temperature sensor disconnected;34=Input current too high
+com.victronenergy.charger,Relay on the charger,2320,uint16,1,0 to 65336,/Relay/0/State,0=Open;1=Closed
+com.victronenergy.charger,Low voltage alarm,2321,uint16,1,0 to 65336,/Alarms/LowVoltage,0=No alarm;2=Alarm
+com.victronenergy.charger,High voltage alarm,2322,uint16,1,0 to 65336,/Alarms/HighVoltage,0=No alarm;2=Alarm
